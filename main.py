@@ -9,7 +9,7 @@ from heandler import handle_start, handle_messages
 def main():
     load_dotenv()
 
-    token_tg = os.environ['TOKEN_TG']
+    token_tg = os.environ['TG_TOKEN']
     bot = telebot.TeleBot(token_tg)
 
     handle_start(bot)
