@@ -1,9 +1,11 @@
-from utils import (download_all_comics, check_and_download_new_comics,
-                   download_specific_comic, download_comic)
-import telebot
 import os
 from dotenv import load_dotenv
-from heandler import handle_start, handle_messages
+from utils import  send_random_comic
+import telebot
+
+
+def handle_start(bot: telebot.TeleBot):
+    bot.register_message_handler(lambda message: send_random_comic(bot, message.chat.id), commands=['start'])
 
 
 def main():
@@ -13,7 +15,6 @@ def main():
     bot = telebot.TeleBot(token_tg)
 
     handle_start(bot)
-    handle_messages(bot)
 
 
     bot.polling()
