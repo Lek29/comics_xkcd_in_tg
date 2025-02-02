@@ -16,7 +16,6 @@ def main():
 
     handle_start(bot)
 
-
     bot.polling()
 
 if __name__ == '__main__':
