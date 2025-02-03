@@ -2,7 +2,7 @@ from random import randint
 import requests
 
 
-def fetch_comic(comic_number=None):
+def fetch_comic():
     latest_number = fetch_latest_comic_number()
     if not latest_number:
         return None

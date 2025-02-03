@@ -11,10 +11,15 @@ def handle_start(bot: telebot.TeleBot):
 def main():
     load_dotenv()
 
+    GROUP_CHAT_ID = os.environ['GROUP_CHAT_ID']
     token_tg = os.environ['TG_TOKEN']
     bot = telebot.TeleBot(token_tg)
 
-    handle_start(bot)
+
+
+    send_random_comic(bot, GROUP_CHAT_ID)
+    print("Комикс успешно опубликован.")
+
 
     bot.polling()
 
