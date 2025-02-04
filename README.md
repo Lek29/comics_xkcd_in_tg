@@ -29,6 +29,7 @@
     Создайте файл .env в корне проекта и добавьте в него токен Telegram-бота:
 
       `TOKEN_TG=YOUR_TELEGRAM_BOT_TOKEN`
+   
       `GROUP_CHAT_ID=YOUR_GROUP_CHAT_ID`
   
 5. Запуск бота
