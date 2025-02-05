@@ -1,4 +1,3 @@
-from random import randint
 import requests
 
 
@@ -27,10 +26,7 @@ def fetch_comic(comic_number):
 
 
 def send_random_comic(bot, chat_id, comic):
-    bot.send_photo(chat_id, comic['img_url'], caption=f'{comic["title"]}\n{comic["alt_text"]}')
-
-
-
-
-
-
+    bot.send_photo(
+        chat_id, comic['img_url'],
+        caption=f'{comic["title"]}\n{comic["alt_text"]}'
+    )
