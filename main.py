@@ -9,7 +9,7 @@ import telebot
 def main():
     load_dotenv()
 
-    GROUP_CHAT_ID = os.environ['GROUP_CHAT_ID']
+    group_chat_id = os.environ['GROUP_CHAT_ID']
     token_tg = os.environ['TG_TOKEN']
     bot = telebot.TeleBot(token_tg)
 
@@ -18,7 +18,7 @@ def main():
     comic = fetch_comic(random_comic_number)
 
 
-    send_random_comic(bot, GROUP_CHAT_ID, comic)
+    send_random_comic(bot, group_chat_id, comic)
     print("Комикс успешно опубликован.")
 
 
