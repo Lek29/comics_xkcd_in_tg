@@ -6,10 +6,6 @@ from utils import  (send_random_comic, fetch_latest_comic_number,
 import telebot
 
 
-def handle_start(bot: telebot.TeleBot):
-    bot.register_message_handler(lambda message: send_random_comic(bot, message.chat.id), commands=['start'])
-
-
 def main():
     load_dotenv()
 
